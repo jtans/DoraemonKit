@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "DoraemonNSLogModel.h"
 
+extern void myNSLog(NSString *format, ...);
 
 @interface DoraemonNSLogManager : NSObject
 

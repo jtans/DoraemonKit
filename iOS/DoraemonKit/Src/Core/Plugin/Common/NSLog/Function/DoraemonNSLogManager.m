@@ -22,7 +22,7 @@ void myNSLog(NSString *format, ...){
     [[DoraemonNSLogManager sharedInstance] addNSLog:str];
     //再调用原来的nslog
     //old_nslog(str);
-    old_nslog(@"%@",str);
+//    old_nslog(@"%@",str);
 }
 
 
@@ -39,7 +39,7 @@ void myNSLog(NSString *format, ...){
 }
 
 - (void)startNSLogMonitor{
-    doraemon_rebind_symbols((struct doraemon_rebinding[1]){"NSLog", (void *)myNSLog, (void **)&old_nslog},1);
+//    doraemon_rebind_symbols((struct doraemon_rebinding[1]){"NSLog", (void *)myNSLog, (void **)&old_nslog},1);
 }
 
 - (void)stopNSLogMonitor{
